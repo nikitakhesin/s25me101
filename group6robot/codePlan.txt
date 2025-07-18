@@ -1,0 +1,60 @@
+codePlan.txt
+
+Keep the most recent plan at the top please
+
+July 18th
+
+Task List Overview
+	Startup
+	Read colours
+	Generate algorithm
+	Reformat moves
+	Solve Cube
+	Shutdown
+
+Task Breakdown
+	Startup
+		Reset/Calibrate sensors and motors
+		Move basket to "perpendicular"/"zero" orientation
+		Move puller to "standard"/"zero" position
+		Move lifter to "down"/"zero" position
+		
+		Prompt for next file to exec
+		Prompt user to insert Cube
+		Prompt to confirm successful startup
+	
+	Read Colours
+		Display scan order (of face)
+		Write each cell to array
+		Verify that the colours were read correctly (via array)
+		Write array to file
+		
+		Display current cell being read
+		Prompt to confirm that face has been ready correctly, and give option(s) as for what to change
+		UI for modifying individul incorrectly read cells (changing one or more incorrectly read cells on the face)
+	
+	Generate Moves (on laptop)
+		Bring file into an array
+		Verify that array does indeed represent a cube (9 cells of each color, etc.)
+		Convert array into format that the ALGORITHM requires
+		Run ALGORITHM
+		Convert ALGORITHM output to a sequence of usable "move" instructions
+		Convert moves into motor rotations
+		Writes sequence of motor rotations to output file
+		
+		More error checking of cube (no identical edges, vertecies, or centres, etc.)
+		Estimate time to solve based on number of moves
+	
+	Solve Cube
+		Receives file with motor rotations
+		Turns motors according to file
+		Between all basket rotations, confirms that basket is perpendicular (within tolerance)
+		Starts timer
+		
+	Shutdown
+		Reset basket orientation
+		Reset flipper position
+		Reset lifter position
+		Turn off all motors
+		Close all files
+		
